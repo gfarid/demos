@@ -41,6 +41,12 @@
     overflow: hidden;
 }
 
+.List--stacked .ListItem-title,
+.List--stacked .ListItem-body,
+.List--stacked .ListItem-footer {
+    line-height: 40px;
+}
+
 .List--stacked .ListItem-title {
     font-size: 100%;
     font-weight: bold;
@@ -60,6 +66,11 @@
 
     float: right;
     text-align: right;
+}
+
+.List--stacked .ListItem-footer  > * {
+    vertical-align: middle;
+    line-height: normal;
 }
 
 .List--cards .ListItem {

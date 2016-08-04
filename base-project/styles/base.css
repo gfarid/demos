@@ -1,0 +1,45 @@
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%; /* 16px */
+  font-variant: small-caps;
+}
+
+body {
+  padding: 1em;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  font-size: 1.2rem; /* 16*1.2 = 19.2px */
+  margin-top: 0.5em; /* 19.2*0.5 = 9.6px */
+  margin-bottom: 0.5em;
+}
+
+.button {
+  color: white;
+  background-color: lightblue;
+  padding: 0.5em;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+a {
+  color: initial;
+}
+
+button.button {
+  border: none;
+  font-size: inherit;
+}
+
+.button.button-callout {
+  text-transform: uppercase;
+}

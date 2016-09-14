@@ -1,8 +1,14 @@
 var input = document.querySelector("input");
+var fieldset = document.querySelector("fieldset");
 
 input.addEventListener("keydown", censorKey);
 input.addEventListener("keydown", logKey);
 
+fieldset.addEventListener("keydown", showBadKey);
+
+function showBadKey (e) {
+  e.currentTarget.classList.toggle("error", isBadKey(e.key));
+}
 
 function censorKey (e) {
   if (isBadKey(e.key)) {

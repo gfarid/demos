@@ -7,7 +7,6 @@ input.addEventListener("keydown", logKey);
 function censorKey (e) {
   if (isBadKey(e.key)) {
     e.preventDefault();
-    e.stopImmediatePropagation();
   }
 }
 

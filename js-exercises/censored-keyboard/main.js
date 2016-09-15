@@ -5,6 +5,9 @@ input.addEventListener("keydown", censorKey);
 input.addEventListener("keydown", logKey);
 
 fieldset.addEventListener("keydown", showBadKey);
+fieldset.addEventListener("keydown", function (e) {
+  console.log("fieldset");
+});
 
 function showBadKey (e) {
   e.currentTarget.classList.toggle("error", isBadKey(e.key));

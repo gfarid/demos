@@ -28,6 +28,14 @@ var t2 = inherit(Triangle, {
 
 function inherit (type, props) {
   var t = Object.create(type);
+  Object.keys(props).forEach(function (prop) {
+    t[prop] = props[prop];
+  });
+  return t;
+}
+
+function inherit (type, props) {
+  var t = Object.create(type);
   for (var prop in props) {
     if (props.hasOwnProperty(prop)) {
       t[prop] = props[prop];

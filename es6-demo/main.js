@@ -1,15 +1,11 @@
 'use strict';
 
-
-
-
-
-let foo=42;
+let foo = 42;
 
 var result = [1, 2, 3].map(value => {
-
   return `The value is ${value} ${foo}`;
 });
+
 console.log(result);
 
 

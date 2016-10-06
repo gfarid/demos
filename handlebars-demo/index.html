@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="container"></div>
+
+  <script id="entry-template" type="text/x-handlebars-template">
+    <div class="entries">
+      {{#each entries}}
+        <div class="entry">
+          <h1>{{title}} - {{id}}</h1>
+          <div class="body">
+            {{body}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </script>
+
+  <script src="handlebars-v4.0.5.js"></script>
+
+  <script>
+    var templateString = document.getElementById("entry-template").innerHTML;
+    var templateFunction = Handlebars.compile(templateString);
+    var data = {
+      entries: [
+        {
+          title: "Hi",
+          body: "Hello World!",
+          id: 1
+        },
+        {
+          title: "Bye",
+          body: "Bye Cruel World!",
+          id: 2
+        }
+      ]
+    };
+    var htmlString = templateFunction(data);
+    var container = document.getElementById("container");
+    container.innerHTML = htmlString;
+  </script>
+</body>
+</html>

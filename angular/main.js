@@ -15,8 +15,6 @@ function myWatcher () {
   return {
     restrict: 'A',
     link: function ($scope, element, attrs) {
-      element.val($scope.$eval(attrs.myWatcher));
-
       $scope.$watch(attrs.myWatcher, function (newValue, oldValue) {
         element.val(newValue);
         console.log('old value was ' + oldValue);
